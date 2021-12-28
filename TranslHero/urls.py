@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 import Home.views as home_views
 import Authentication.views as auth_views
+import Translation.views as trans_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,6 @@ urlpatterns = [
     path('login', auth_views.login),
     path('signup', auth_views.signup),
     path('logout', auth_views.logout),
+    # Translation
+    path('translation', trans_views.translation)
 ]

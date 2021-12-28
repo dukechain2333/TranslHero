@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translation</title>
+    {% include 'General/Packages.html' %} {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Translation.css' %}">
+</head>
+<body>
+<div class="container-fluent">
+    <div class="row">{% include 'General/Navigator.html' %}</div>
+    <div class="offset-md-2 col-md-8 mainContent">
+        <form class="row g-3 formBox" method="post">
+            {% csrf_token %}
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Translate</button>
+            </div>
+            <div class="col-auto">
+                <a class="btn btn-danger text-nowrap" id="clear" href="/translation">Clear</a>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" name="fromLanguage">
+                    <option selected>Langauge</option>
+                    <option value="auto">Auto</option>
+                    <option value="zh">Chinese</option>
+                    <option value="en">English</option>
+                    <option value="fra">French</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                    <option value="jp">Japanese</option>
+                    <option value="kor">Korean</option>
+                    <option value="ru">Russia</option>
+                    <option value="spa">Spanish</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" name="toLanguage">
+                    <option selected>Langauge</option>
+                    <option value="auto">Auto</option>
+                    <option value="zh">Chinese</option>
+                    <option value="en">English</option>
+                    <option value="fra">French</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                    <option value="jp">Japanese</option>
+                    <option value="kor">Korean</option>
+                    <option value="ru">Russia</option>
+                    <option value="spa">Spanish</option>
+                </select>
+            </div>
+            <div class="shadow p-3 mb-10 bg-white rounded">
+                <div class="row">
+                    <div class="col">
+                        {% if inputText %}
+                            <textarea class="form-control" rows="15" id="inputBox">{{ inputText }}</textarea>
+                        {% else %}
+                            <textarea class="form-control" rows="15"
+                                      name="inputBox" id="inputBox">Input your original text here.</textarea>
+                        {% endif %}
+                    </div>
+                    <div class="col">
+                        {% if translatedText %}
+                            <textarea class="form-control" rows="15" id="outputBox">{{ translatedText }}</textarea>
+                        {% else %}
+                            <textarea class="form-control" rows="15"
+                                      id="outputBox">Your result will show up here.</textarea>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">{% include 'General/Copyright.html' %}</div>
+</div>
+</body>
+</html>
