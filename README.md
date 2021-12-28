@@ -46,7 +46,9 @@ python manage.py runserver <your_host>:<your_port>
 
 - You may get more details by visiting [Django Documents](https://www.djangoproject.com/)
 
-8. And finally, by visiting `http://<your_host>:<your_port>/`, you are good to go.
+## Usage
+
+1. By visiting `http://<your_host>:<your_port>/`, you are good to go.
 
 ## Licence
 

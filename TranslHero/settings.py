@@ -14,8 +14,8 @@ from pathlib import Path
 import os
 
 # User settings
-APPID = ''
-APPKEY = ''
+APPID = '20210331000756021'
+APPKEY = 'AOeIKwf4gq52z23nPSlu'
 BAIDU_URL = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-29&2p!n_nv(-n7la2w0)t18gz@h)hn-sduz-3-ow6d%*&gms1e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
