@@ -12,12 +12,6 @@ A tool to help you translate multiple languages. (Web-based translation applicat
 2. Set `ALLOWED_HOSTS` option
 3. Fill in the `APPID` and `APPKEY` option. You may get this information at [Baidu Fanyi](https://api.fanyi.baidu.com/)
 4. Use `pip install -r requirements.txt` to install dependencies.
-5. Put following command into your command prompt
-
-```bash
-python manage.py collectstatic
-```
-
 5. Enter the following command into your command prompt to initialize the database.
 
 ```bash
